@@ -1,0 +1,593 @@
+{
+  "contractName": "IRandomNumberGenerator",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_seed",
+          "type": "uint256"
+        }
+      ],
+      "name": "getRandomNumber",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "viewLatestLotteryId",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "viewRandomResult",
+      "outputs": [
+        {
+          "internalType": "uint32",
+          "name": "",
+          "type": "uint32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.12+commit.27d51765\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_seed\",\"type\":\"uint256\"}],\"name\":\"getRandomNumber\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"viewLatestLotteryId\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"viewRandomResult\",\"outputs\":[{\"internalType\":\"uint32\",\"name\":\"\",\"type\":\"uint32\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"getRandomNumber(uint256)\":{\"notice\":\"Requests randomness from a user-provided seed\"},\"viewLatestLotteryId()\":{\"notice\":\"View latest lotteryId numbers\"},\"viewRandomResult()\":{\"notice\":\"Views random result\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/libs/IRandomNumberGenerator.sol\":\"IRandomNumberGenerator\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":1500},\"remappings\":[]},\"sources\":{\"project:/contracts/libs/IRandomNumberGenerator.sol\":{\"keccak256\":\"0xf4d1a82a29ec3cbfe612b000dd19f6213a472efff9d299535e9cc73901d89c9b\",\"urls\":[\"bzz-raw://c839edaea4dbf8f61675fa95712c95904bce6d22c4a8181a9356e4e8b8eeca15\",\"dweb:/ipfs/QmWDGgiLguSSBdGsghjh95KymPfgv6HDhYsv6LWgg7r3YL\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity 0.6.12;\r\n\r\ninterface IRandomNumberGenerator {\r\n    /**\r\n     * Requests randomness from a user-provided seed\r\n     */\r\n    function getRandomNumber(uint256 _seed) external;\r\n\r\n    /**\r\n     * View latest lotteryId numbers\r\n     */\r\n    function viewLatestLotteryId() external view returns (uint256);\r\n\r\n    /**\r\n     * Views random result\r\n     */\r\n    function viewRandomResult() external view returns (uint32);\r\n}",
+  "sourcePath": "G:\\Blockchain\\Ethereum\\GuitarSwap\\Work\\PancakeSwap\\Work\\guitar-contracts\\contracts\\libs\\IRandomNumberGenerator.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/libs/IRandomNumberGenerator.sol",
+    "exportedSymbols": {
+      "IRandomNumberGenerator": [
+        15162
+      ]
+    },
+    "id": 15163,
+    "license": null,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 15143,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".12"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:38"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 15162,
+        "linearizedBaseContracts": [
+          15162
+        ],
+        "name": "IRandomNumberGenerator",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": {
+              "id": 15144,
+              "nodeType": "StructuredDocumentation",
+              "src": "67:66:38",
+              "text": " Requests randomness from a user-provided seed"
+            },
+            "functionSelector": "b37217a4",
+            "id": 15149,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getRandomNumber",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 15147,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 15146,
+                  "mutability": "mutable",
+                  "name": "_seed",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 15149,
+                  "src": "164:13:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 15145,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "164:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "163:15:38"
+            },
+            "returnParameters": {
+              "id": 15148,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "187:0:38"
+            },
+            "scope": 15162,
+            "src": "139:49:38",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 15150,
+              "nodeType": "StructuredDocumentation",
+              "src": "196:50:38",
+              "text": " View latest lotteryId numbers"
+            },
+            "functionSelector": "fbe5d917",
+            "id": 15155,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "viewLatestLotteryId",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 15151,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "280:2:38"
+            },
+            "returnParameters": {
+              "id": 15154,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 15153,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 15155,
+                  "src": "306:7:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 15152,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "306:7:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "305:9:38"
+            },
+            "scope": 15162,
+            "src": "252:63:38",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 15156,
+              "nodeType": "StructuredDocumentation",
+              "src": "323:40:38",
+              "text": " Views random result"
+            },
+            "functionSelector": "a1c4f55a",
+            "id": 15161,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "viewRandomResult",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 15157,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "394:2:38"
+            },
+            "returnParameters": {
+              "id": 15160,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 15159,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 15161,
+                  "src": "420:6:38",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint32",
+                    "typeString": "uint32"
+                  },
+                  "typeName": {
+                    "id": 15158,
+                    "name": "uint32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "420:6:38",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint32",
+                      "typeString": "uint32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "419:8:38"
+            },
+            "scope": 15162,
+            "src": "369:59:38",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 15163,
+        "src": "27:404:38"
+      }
+    ],
+    "src": "0:431:38"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/libs/IRandomNumberGenerator.sol",
+      "exportedSymbols": {
+        "IRandomNumberGenerator": [
+          15162
+        ]
+      },
+      "license": null
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "0.6",
+            ".12"
+          ]
+        },
+        "id": 15143,
+        "name": "PragmaDirective",
+        "src": "0:23:38"
+      },
+      {
+        "attributes": {
+          "abstract": false,
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "interface",
+          "documentation": null,
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            15162
+          ],
+          "name": "IRandomNumberGenerator",
+          "scope": 15163
+        },
+        "children": [
+          {
+            "attributes": {
+              "body": null,
+              "functionSelector": "b37217a4",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getRandomNumber",
+              "overrides": null,
+              "scope": 15162,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": " Requests randomness from a user-provided seed"
+                },
+                "id": 15144,
+                "name": "StructuredDocumentation",
+                "src": "67:66:38"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_seed",
+                      "overrides": null,
+                      "scope": 15149,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 15145,
+                        "name": "ElementaryTypeName",
+                        "src": "164:7:38"
+                      }
+                    ],
+                    "id": 15146,
+                    "name": "VariableDeclaration",
+                    "src": "164:13:38"
+                  }
+                ],
+                "id": 15147,
+                "name": "ParameterList",
+                "src": "163:15:38"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 15148,
+                "name": "ParameterList",
+                "src": "187:0:38"
+              }
+            ],
+            "id": 15149,
+            "name": "FunctionDefinition",
+            "src": "139:49:38"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "functionSelector": "fbe5d917",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "viewLatestLotteryId",
+              "overrides": null,
+              "scope": 15162,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": " View latest lotteryId numbers"
+                },
+                "id": 15150,
+                "name": "StructuredDocumentation",
+                "src": "196:50:38"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 15151,
+                "name": "ParameterList",
+                "src": "280:2:38"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "overrides": null,
+                      "scope": 15155,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 15152,
+                        "name": "ElementaryTypeName",
+                        "src": "306:7:38"
+                      }
+                    ],
+                    "id": 15153,
+                    "name": "VariableDeclaration",
+                    "src": "306:7:38"
+                  }
+                ],
+                "id": 15154,
+                "name": "ParameterList",
+                "src": "305:9:38"
+              }
+            ],
+            "id": 15155,
+            "name": "FunctionDefinition",
+            "src": "252:63:38"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "functionSelector": "a1c4f55a",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "viewRandomResult",
+              "overrides": null,
+              "scope": 15162,
+              "stateMutability": "view",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": " Views random result"
+                },
+                "id": 15156,
+                "name": "StructuredDocumentation",
+                "src": "323:40:38"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 15157,
+                "name": "ParameterList",
+                "src": "394:2:38"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "overrides": null,
+                      "scope": 15161,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint32",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint32",
+                          "type": "uint32"
+                        },
+                        "id": 15158,
+                        "name": "ElementaryTypeName",
+                        "src": "420:6:38"
+                      }
+                    ],
+                    "id": 15159,
+                    "name": "VariableDeclaration",
+                    "src": "420:6:38"
+                  }
+                ],
+                "id": 15160,
+                "name": "ParameterList",
+                "src": "419:8:38"
+              }
+            ],
+            "id": 15161,
+            "name": "FunctionDefinition",
+            "src": "369:59:38"
+          }
+        ],
+        "id": 15162,
+        "name": "ContractDefinition",
+        "src": "27:404:38"
+      }
+    ],
+    "id": 15163,
+    "name": "SourceUnit",
+    "src": "0:431:38"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.12+commit.27d51765.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.5",
+  "updatedAt": "2022-03-21T03:36:40.319Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {
+      "getRandomNumber(uint256)": {
+        "notice": "Requests randomness from a user-provided seed"
+      },
+      "viewLatestLotteryId()": {
+        "notice": "View latest lotteryId numbers"
+      },
+      "viewRandomResult()": {
+        "notice": "Views random result"
+      }
+    },
+    "version": 1
+  }
+}

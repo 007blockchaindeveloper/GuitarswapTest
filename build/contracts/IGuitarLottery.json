@@ -1,0 +1,1929 @@
+{
+  "contractName": "IGuitarLottery",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_lotteryId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint32[]",
+          "name": "_ticketNumbers",
+          "type": "uint32[]"
+        }
+      ],
+      "name": "buyTickets",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_lotteryId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "_ticketIds",
+          "type": "uint256[]"
+        },
+        {
+          "internalType": "uint32[]",
+          "name": "_brackets",
+          "type": "uint32[]"
+        }
+      ],
+      "name": "claimTickets",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_lotteryId",
+          "type": "uint256"
+        }
+      ],
+      "name": "closeLottery",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_lotteryId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bool",
+          "name": "_autoInjection",
+          "type": "bool"
+        }
+      ],
+      "name": "drawFinalNumberAndMakeLotteryClaimable",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_lotteryId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "injectFunds",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_endTime",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_priceTicketInGuitar",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_discountDivisor",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256[6]",
+          "name": "_rewardsBreakdown",
+          "type": "uint256[6]"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_treasuryFee",
+          "type": "uint256"
+        }
+      ],
+      "name": "startLottery",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "viewCurrentLotteryId",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.12+commit.27d51765\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_lotteryId\",\"type\":\"uint256\"},{\"internalType\":\"uint32[]\",\"name\":\"_ticketNumbers\",\"type\":\"uint32[]\"}],\"name\":\"buyTickets\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_lotteryId\",\"type\":\"uint256\"},{\"internalType\":\"uint256[]\",\"name\":\"_ticketIds\",\"type\":\"uint256[]\"},{\"internalType\":\"uint32[]\",\"name\":\"_brackets\",\"type\":\"uint32[]\"}],\"name\":\"claimTickets\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_lotteryId\",\"type\":\"uint256\"}],\"name\":\"closeLottery\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_lotteryId\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"_autoInjection\",\"type\":\"bool\"}],\"name\":\"drawFinalNumberAndMakeLotteryClaimable\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_lotteryId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"injectFunds\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_endTime\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_priceTicketInGuitar\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_discountDivisor\",\"type\":\"uint256\"},{\"internalType\":\"uint256[6]\",\"name\":\"_rewardsBreakdown\",\"type\":\"uint256[6]\"},{\"internalType\":\"uint256\",\"name\":\"_treasuryFee\",\"type\":\"uint256\"}],\"name\":\"startLottery\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"viewCurrentLotteryId\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"buyTickets(uint256,uint32[])\":{\"details\":\"Callable by users\",\"params\":{\"_lotteryId\":\": lotteryId\",\"_ticketNumbers\":\": array of ticket numbers between 1,000,000 and 1,999,999\"}},\"claimTickets(uint256,uint256[],uint32[])\":{\"details\":\"Callable by users only, not contract!\",\"params\":{\"_brackets\":\": array of brackets for the ticket ids\",\"_lotteryId\":\": lottery id\",\"_ticketIds\":\": array of ticket ids\"}},\"closeLottery(uint256)\":{\"details\":\"Callable by operator\",\"params\":{\"_lotteryId\":\": lottery id\"}},\"drawFinalNumberAndMakeLotteryClaimable(uint256,bool)\":{\"details\":\"Callable by operator\",\"params\":{\"_autoInjection\":\": reinjects funds into next lottery (vs. withdrawing all)\",\"_lotteryId\":\": lottery id\"}},\"injectFunds(uint256,uint256)\":{\"details\":\"Callable by operator\",\"params\":{\"_amount\":\": amount to inject in GUT token\",\"_lotteryId\":\": lottery id\"}},\"startLottery(uint256,uint256,uint256,uint256[6],uint256)\":{\"details\":\"Callable by operator\",\"params\":{\"_discountDivisor\":\": the divisor to calculate the discount magnitude for bulks\",\"_endTime\":\": endTime of the lottery\",\"_priceTicketInGuitar\":\": price of a ticket in GUT\",\"_rewardsBreakdown\":\": breakdown of rewards per bracket (must sum to 10,000)\",\"_treasuryFee\":\": treasury fee (10,000 = 100%, 100 = 1%)\"}}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"buyTickets(uint256,uint32[])\":{\"notice\":\"Buy tickets for the current lottery\"},\"claimTickets(uint256,uint256[],uint32[])\":{\"notice\":\"Claim a set of winning tickets for a lottery\"},\"closeLottery(uint256)\":{\"notice\":\"Close lottery\"},\"drawFinalNumberAndMakeLotteryClaimable(uint256,bool)\":{\"notice\":\"Draw the final number, calculate reward in GUT per group, and make lottery claimable\"},\"injectFunds(uint256,uint256)\":{\"notice\":\"Inject funds\"},\"startLottery(uint256,uint256,uint256,uint256[6],uint256)\":{\"notice\":\"Start the lottery\"},\"viewCurrentLotteryId()\":{\"notice\":\"View current lottery id\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/libs/IGuitarLottery.sol\":\"IGuitarLottery\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":1500},\"remappings\":[]},\"sources\":{\"project:/contracts/libs/IGuitarLottery.sol\":{\"keccak256\":\"0x4b943ba60179aa4675d097b753f011c744aee8cc7bd1f1d81aff41cb7795a3a6\",\"urls\":[\"bzz-raw://4524633b22d442f08e8467022367b9fb7afd8822afa3dbc00a3e9810283f0779\",\"dweb:/ipfs/QmUH4jHgXKjotK42iqpDsv17e6A3Af7evn6Es5ZsdPR1My\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity 0.6.12;\r\ninterface IGuitarLottery {\r\n    /**\r\n     * @notice Buy tickets for the current lottery\r\n     * @param _lotteryId: lotteryId\r\n     * @param _ticketNumbers: array of ticket numbers between 1,000,000 and 1,999,999\r\n     * @dev Callable by users\r\n     */\r\n    function buyTickets(uint256 _lotteryId, uint32[] calldata _ticketNumbers) external;\r\n\r\n    /**\r\n     * @notice Claim a set of winning tickets for a lottery\r\n     * @param _lotteryId: lottery id\r\n     * @param _ticketIds: array of ticket ids\r\n     * @param _brackets: array of brackets for the ticket ids\r\n     * @dev Callable by users only, not contract!\r\n     */\r\n    function claimTickets(\r\n        uint256 _lotteryId,\r\n        uint256[] calldata _ticketIds,\r\n        uint32[] calldata _brackets\r\n    ) external;\r\n\r\n    /**\r\n     * @notice Close lottery\r\n     * @param _lotteryId: lottery id\r\n     * @dev Callable by operator\r\n     */\r\n    function closeLottery(uint256 _lotteryId) external;\r\n\r\n    /**\r\n     * @notice Draw the final number, calculate reward in GUT per group, and make lottery claimable\r\n     * @param _lotteryId: lottery id\r\n     * @param _autoInjection: reinjects funds into next lottery (vs. withdrawing all)\r\n     * @dev Callable by operator\r\n     */\r\n    function drawFinalNumberAndMakeLotteryClaimable(uint256 _lotteryId, bool _autoInjection) external;\r\n\r\n    /**\r\n     * @notice Inject funds\r\n     * @param _lotteryId: lottery id\r\n     * @param _amount: amount to inject in GUT token\r\n     * @dev Callable by operator\r\n     */\r\n    function injectFunds(uint256 _lotteryId, uint256 _amount) external;\r\n\r\n    /**\r\n     * @notice Start the lottery\r\n     * @dev Callable by operator\r\n     * @param _endTime: endTime of the lottery\r\n     * @param _priceTicketInGuitar: price of a ticket in GUT\r\n     * @param _discountDivisor: the divisor to calculate the discount magnitude for bulks\r\n     * @param _rewardsBreakdown: breakdown of rewards per bracket (must sum to 10,000)\r\n     * @param _treasuryFee: treasury fee (10,000 = 100%, 100 = 1%)\r\n     */\r\n    function startLottery(\r\n        uint256 _endTime,\r\n        uint256 _priceTicketInGuitar,\r\n        uint256 _discountDivisor,\r\n        uint256[6] calldata _rewardsBreakdown,\r\n        uint256 _treasuryFee\r\n    ) external;\r\n\r\n    /**\r\n     * @notice View current lottery id\r\n     */\r\n    function viewCurrentLotteryId() external returns (uint256);\r\n}\r\n",
+  "sourcePath": "G:\\Blockchain\\Ethereum\\GuitarSwap\\Work\\PancakeSwap\\Work\\guitar-contracts\\contracts\\libs\\IGuitarLottery.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/libs/IGuitarLottery.sol",
+    "exportedSymbols": {
+      "IGuitarLottery": [
+        15021
+      ]
+    },
+    "id": 15022,
+    "license": null,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 14955,
+        "literals": [
+          "solidity",
+          "0.6",
+          ".12"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:35"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": null,
+        "fullyImplemented": false,
+        "id": 15021,
+        "linearizedBaseContracts": [
+          15021
+        ],
+        "name": "IGuitarLottery",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": null,
+            "documentation": {
+              "id": 14956,
+              "nodeType": "StructuredDocumentation",
+              "src": "57:219:35",
+              "text": " @notice Buy tickets for the current lottery\n @param _lotteryId: lotteryId\n @param _ticketNumbers: array of ticket numbers between 1,000,000 and 1,999,999\n @dev Callable by users"
+            },
+            "functionSelector": "88303dbd",
+            "id": 14964,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "buyTickets",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 14962,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14958,
+                  "mutability": "mutable",
+                  "name": "_lotteryId",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 14964,
+                  "src": "302:18:35",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 14957,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "302:7:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 14961,
+                  "mutability": "mutable",
+                  "name": "_ticketNumbers",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 14964,
+                  "src": "322:32:35",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint32_$dyn_calldata_ptr",
+                    "typeString": "uint32[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 14959,
+                      "name": "uint32",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "322:6:35",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint32",
+                        "typeString": "uint32"
+                      }
+                    },
+                    "id": 14960,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "322:8:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint32_$dyn_storage_ptr",
+                      "typeString": "uint32[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "301:54:35"
+            },
+            "returnParameters": {
+              "id": 14963,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "364:0:35"
+            },
+            "scope": 15021,
+            "src": "282:83:35",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 14965,
+              "nodeType": "StructuredDocumentation",
+              "src": "373:272:35",
+              "text": " @notice Claim a set of winning tickets for a lottery\n @param _lotteryId: lottery id\n @param _ticketIds: array of ticket ids\n @param _brackets: array of brackets for the ticket ids\n @dev Callable by users only, not contract!"
+            },
+            "functionSelector": "c914914f",
+            "id": 14976,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "claimTickets",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 14974,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14967,
+                  "mutability": "mutable",
+                  "name": "_lotteryId",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 14976,
+                  "src": "683:18:35",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 14966,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "683:7:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 14970,
+                  "mutability": "mutable",
+                  "name": "_ticketIds",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 14976,
+                  "src": "712:29:35",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_calldata_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 14968,
+                      "name": "uint256",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "712:7:35",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 14969,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "712:9:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 14973,
+                  "mutability": "mutable",
+                  "name": "_brackets",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 14976,
+                  "src": "752:27:35",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint32_$dyn_calldata_ptr",
+                    "typeString": "uint32[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 14971,
+                      "name": "uint32",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "752:6:35",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint32",
+                        "typeString": "uint32"
+                      }
+                    },
+                    "id": 14972,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "752:8:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint32_$dyn_storage_ptr",
+                      "typeString": "uint32[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "672:114:35"
+            },
+            "returnParameters": {
+              "id": 14975,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "795:0:35"
+            },
+            "scope": 15021,
+            "src": "651:145:35",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 14977,
+              "nodeType": "StructuredDocumentation",
+              "src": "804:114:35",
+              "text": " @notice Close lottery\n @param _lotteryId: lottery id\n @dev Callable by operator"
+            },
+            "functionSelector": "9d8ca531",
+            "id": 14982,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "closeLottery",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 14980,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14979,
+                  "mutability": "mutable",
+                  "name": "_lotteryId",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 14982,
+                  "src": "946:18:35",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 14978,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "946:7:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "945:20:35"
+            },
+            "returnParameters": {
+              "id": 14981,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "974:0:35"
+            },
+            "scope": 15021,
+            "src": "924:51:35",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 14983,
+              "nodeType": "StructuredDocumentation",
+              "src": "983:272:35",
+              "text": " @notice Draw the final number, calculate reward in GUT per group, and make lottery claimable\n @param _lotteryId: lottery id\n @param _autoInjection: reinjects funds into next lottery (vs. withdrawing all)\n @dev Callable by operator"
+            },
+            "functionSelector": "c38de539",
+            "id": 14990,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "drawFinalNumberAndMakeLotteryClaimable",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 14988,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14985,
+                  "mutability": "mutable",
+                  "name": "_lotteryId",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 14990,
+                  "src": "1309:18:35",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 14984,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1309:7:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 14987,
+                  "mutability": "mutable",
+                  "name": "_autoInjection",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 14990,
+                  "src": "1329:19:35",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 14986,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1329:4:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1308:41:35"
+            },
+            "returnParameters": {
+              "id": 14989,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1358:0:35"
+            },
+            "scope": 15021,
+            "src": "1261:98:35",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 14991,
+              "nodeType": "StructuredDocumentation",
+              "src": "1367:167:35",
+              "text": " @notice Inject funds\n @param _lotteryId: lottery id\n @param _amount: amount to inject in GUT token\n @dev Callable by operator"
+            },
+            "functionSelector": "471aeab4",
+            "id": 14998,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "injectFunds",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 14996,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 14993,
+                  "mutability": "mutable",
+                  "name": "_lotteryId",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 14998,
+                  "src": "1561:18:35",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 14992,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1561:7:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 14995,
+                  "mutability": "mutable",
+                  "name": "_amount",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 14998,
+                  "src": "1581:15:35",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 14994,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1581:7:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1560:37:35"
+            },
+            "returnParameters": {
+              "id": 14997,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1606:0:35"
+            },
+            "scope": 15021,
+            "src": "1540:67:35",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 14999,
+              "nodeType": "StructuredDocumentation",
+              "src": "1615:437:35",
+              "text": " @notice Start the lottery\n @dev Callable by operator\n @param _endTime: endTime of the lottery\n @param _priceTicketInGuitar: price of a ticket in GUT\n @param _discountDivisor: the divisor to calculate the discount magnitude for bulks\n @param _rewardsBreakdown: breakdown of rewards per bracket (must sum to 10,000)\n @param _treasuryFee: treasury fee (10,000 = 100%, 100 = 1%)"
+            },
+            "functionSelector": "b1829b82",
+            "id": 15014,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "startLottery",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 15012,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 15001,
+                  "mutability": "mutable",
+                  "name": "_endTime",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 15014,
+                  "src": "2090:16:35",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 15000,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2090:7:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 15003,
+                  "mutability": "mutable",
+                  "name": "_priceTicketInGuitar",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 15014,
+                  "src": "2117:28:35",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 15002,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2117:7:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 15005,
+                  "mutability": "mutable",
+                  "name": "_discountDivisor",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 15014,
+                  "src": "2156:24:35",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 15004,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2156:7:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 15009,
+                  "mutability": "mutable",
+                  "name": "_rewardsBreakdown",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 15014,
+                  "src": "2191:37:35",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$6_calldata_ptr",
+                    "typeString": "uint256[6]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 15006,
+                      "name": "uint256",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "2191:7:35",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 15008,
+                    "length": {
+                      "argumentTypes": null,
+                      "hexValue": "36",
+                      "id": 15007,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "2199:1:35",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_6_by_1",
+                        "typeString": "int_const 6"
+                      },
+                      "value": "6"
+                    },
+                    "nodeType": "ArrayTypeName",
+                    "src": "2191:10:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$6_storage_ptr",
+                      "typeString": "uint256[6]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 15011,
+                  "mutability": "mutable",
+                  "name": "_treasuryFee",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 15014,
+                  "src": "2239:20:35",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 15010,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2239:7:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2079:187:35"
+            },
+            "returnParameters": {
+              "id": 15013,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2275:0:35"
+            },
+            "scope": 15021,
+            "src": "2058:218:35",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "body": null,
+            "documentation": {
+              "id": 15015,
+              "nodeType": "StructuredDocumentation",
+              "src": "2284:52:35",
+              "text": " @notice View current lottery id"
+            },
+            "functionSelector": "80a06160",
+            "id": 15020,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "viewCurrentLotteryId",
+            "nodeType": "FunctionDefinition",
+            "overrides": null,
+            "parameters": {
+              "id": 15016,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2371:2:35"
+            },
+            "returnParameters": {
+              "id": 15019,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 15018,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "overrides": null,
+                  "scope": 15020,
+                  "src": "2392:7:35",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 15017,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2392:7:35",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2391:9:35"
+            },
+            "scope": 15021,
+            "src": "2342:59:35",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 15022,
+        "src": "25:2379:35"
+      }
+    ],
+    "src": "0:2406:35"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/libs/IGuitarLottery.sol",
+      "exportedSymbols": {
+        "IGuitarLottery": [
+          15021
+        ]
+      },
+      "license": null
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "0.6",
+            ".12"
+          ]
+        },
+        "id": 14955,
+        "name": "PragmaDirective",
+        "src": "0:23:35"
+      },
+      {
+        "attributes": {
+          "abstract": false,
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "interface",
+          "documentation": null,
+          "fullyImplemented": false,
+          "linearizedBaseContracts": [
+            15021
+          ],
+          "name": "IGuitarLottery",
+          "scope": 15022
+        },
+        "children": [
+          {
+            "attributes": {
+              "body": null,
+              "functionSelector": "88303dbd",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "buyTickets",
+              "overrides": null,
+              "scope": 15021,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": " @notice Buy tickets for the current lottery\n @param _lotteryId: lotteryId\n @param _ticketNumbers: array of ticket numbers between 1,000,000 and 1,999,999\n @dev Callable by users"
+                },
+                "id": 14956,
+                "name": "StructuredDocumentation",
+                "src": "57:219:35"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_lotteryId",
+                      "overrides": null,
+                      "scope": 14964,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 14957,
+                        "name": "ElementaryTypeName",
+                        "src": "302:7:35"
+                      }
+                    ],
+                    "id": 14958,
+                    "name": "VariableDeclaration",
+                    "src": "302:18:35"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_ticketNumbers",
+                      "overrides": null,
+                      "scope": 14964,
+                      "stateVariable": false,
+                      "storageLocation": "calldata",
+                      "type": "uint32[]",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "length": null,
+                          "type": "uint32[]"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "name": "uint32",
+                              "type": "uint32"
+                            },
+                            "id": 14959,
+                            "name": "ElementaryTypeName",
+                            "src": "322:6:35"
+                          }
+                        ],
+                        "id": 14960,
+                        "name": "ArrayTypeName",
+                        "src": "322:8:35"
+                      }
+                    ],
+                    "id": 14961,
+                    "name": "VariableDeclaration",
+                    "src": "322:32:35"
+                  }
+                ],
+                "id": 14962,
+                "name": "ParameterList",
+                "src": "301:54:35"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 14963,
+                "name": "ParameterList",
+                "src": "364:0:35"
+              }
+            ],
+            "id": 14964,
+            "name": "FunctionDefinition",
+            "src": "282:83:35"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "functionSelector": "c914914f",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "claimTickets",
+              "overrides": null,
+              "scope": 15021,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": " @notice Claim a set of winning tickets for a lottery\n @param _lotteryId: lottery id\n @param _ticketIds: array of ticket ids\n @param _brackets: array of brackets for the ticket ids\n @dev Callable by users only, not contract!"
+                },
+                "id": 14965,
+                "name": "StructuredDocumentation",
+                "src": "373:272:35"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_lotteryId",
+                      "overrides": null,
+                      "scope": 14976,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 14966,
+                        "name": "ElementaryTypeName",
+                        "src": "683:7:35"
+                      }
+                    ],
+                    "id": 14967,
+                    "name": "VariableDeclaration",
+                    "src": "683:18:35"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_ticketIds",
+                      "overrides": null,
+                      "scope": 14976,
+                      "stateVariable": false,
+                      "storageLocation": "calldata",
+                      "type": "uint256[]",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "length": null,
+                          "type": "uint256[]"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "name": "uint256",
+                              "type": "uint256"
+                            },
+                            "id": 14968,
+                            "name": "ElementaryTypeName",
+                            "src": "712:7:35"
+                          }
+                        ],
+                        "id": 14969,
+                        "name": "ArrayTypeName",
+                        "src": "712:9:35"
+                      }
+                    ],
+                    "id": 14970,
+                    "name": "VariableDeclaration",
+                    "src": "712:29:35"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_brackets",
+                      "overrides": null,
+                      "scope": 14976,
+                      "stateVariable": false,
+                      "storageLocation": "calldata",
+                      "type": "uint32[]",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "length": null,
+                          "type": "uint32[]"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "name": "uint32",
+                              "type": "uint32"
+                            },
+                            "id": 14971,
+                            "name": "ElementaryTypeName",
+                            "src": "752:6:35"
+                          }
+                        ],
+                        "id": 14972,
+                        "name": "ArrayTypeName",
+                        "src": "752:8:35"
+                      }
+                    ],
+                    "id": 14973,
+                    "name": "VariableDeclaration",
+                    "src": "752:27:35"
+                  }
+                ],
+                "id": 14974,
+                "name": "ParameterList",
+                "src": "672:114:35"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 14975,
+                "name": "ParameterList",
+                "src": "795:0:35"
+              }
+            ],
+            "id": 14976,
+            "name": "FunctionDefinition",
+            "src": "651:145:35"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "functionSelector": "9d8ca531",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "closeLottery",
+              "overrides": null,
+              "scope": 15021,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": " @notice Close lottery\n @param _lotteryId: lottery id\n @dev Callable by operator"
+                },
+                "id": 14977,
+                "name": "StructuredDocumentation",
+                "src": "804:114:35"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_lotteryId",
+                      "overrides": null,
+                      "scope": 14982,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 14978,
+                        "name": "ElementaryTypeName",
+                        "src": "946:7:35"
+                      }
+                    ],
+                    "id": 14979,
+                    "name": "VariableDeclaration",
+                    "src": "946:18:35"
+                  }
+                ],
+                "id": 14980,
+                "name": "ParameterList",
+                "src": "945:20:35"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 14981,
+                "name": "ParameterList",
+                "src": "974:0:35"
+              }
+            ],
+            "id": 14982,
+            "name": "FunctionDefinition",
+            "src": "924:51:35"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "functionSelector": "c38de539",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "drawFinalNumberAndMakeLotteryClaimable",
+              "overrides": null,
+              "scope": 15021,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": " @notice Draw the final number, calculate reward in GUT per group, and make lottery claimable\n @param _lotteryId: lottery id\n @param _autoInjection: reinjects funds into next lottery (vs. withdrawing all)\n @dev Callable by operator"
+                },
+                "id": 14983,
+                "name": "StructuredDocumentation",
+                "src": "983:272:35"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_lotteryId",
+                      "overrides": null,
+                      "scope": 14990,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 14984,
+                        "name": "ElementaryTypeName",
+                        "src": "1309:7:35"
+                      }
+                    ],
+                    "id": 14985,
+                    "name": "VariableDeclaration",
+                    "src": "1309:18:35"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_autoInjection",
+                      "overrides": null,
+                      "scope": 14990,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 14986,
+                        "name": "ElementaryTypeName",
+                        "src": "1329:4:35"
+                      }
+                    ],
+                    "id": 14987,
+                    "name": "VariableDeclaration",
+                    "src": "1329:19:35"
+                  }
+                ],
+                "id": 14988,
+                "name": "ParameterList",
+                "src": "1308:41:35"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 14989,
+                "name": "ParameterList",
+                "src": "1358:0:35"
+              }
+            ],
+            "id": 14990,
+            "name": "FunctionDefinition",
+            "src": "1261:98:35"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "functionSelector": "471aeab4",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "injectFunds",
+              "overrides": null,
+              "scope": 15021,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": " @notice Inject funds\n @param _lotteryId: lottery id\n @param _amount: amount to inject in GUT token\n @dev Callable by operator"
+                },
+                "id": 14991,
+                "name": "StructuredDocumentation",
+                "src": "1367:167:35"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_lotteryId",
+                      "overrides": null,
+                      "scope": 14998,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 14992,
+                        "name": "ElementaryTypeName",
+                        "src": "1561:7:35"
+                      }
+                    ],
+                    "id": 14993,
+                    "name": "VariableDeclaration",
+                    "src": "1561:18:35"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_amount",
+                      "overrides": null,
+                      "scope": 14998,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 14994,
+                        "name": "ElementaryTypeName",
+                        "src": "1581:7:35"
+                      }
+                    ],
+                    "id": 14995,
+                    "name": "VariableDeclaration",
+                    "src": "1581:15:35"
+                  }
+                ],
+                "id": 14996,
+                "name": "ParameterList",
+                "src": "1560:37:35"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 14997,
+                "name": "ParameterList",
+                "src": "1606:0:35"
+              }
+            ],
+            "id": 14998,
+            "name": "FunctionDefinition",
+            "src": "1540:67:35"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "functionSelector": "b1829b82",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "startLottery",
+              "overrides": null,
+              "scope": 15021,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": " @notice Start the lottery\n @dev Callable by operator\n @param _endTime: endTime of the lottery\n @param _priceTicketInGuitar: price of a ticket in GUT\n @param _discountDivisor: the divisor to calculate the discount magnitude for bulks\n @param _rewardsBreakdown: breakdown of rewards per bracket (must sum to 10,000)\n @param _treasuryFee: treasury fee (10,000 = 100%, 100 = 1%)"
+                },
+                "id": 14999,
+                "name": "StructuredDocumentation",
+                "src": "1615:437:35"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_endTime",
+                      "overrides": null,
+                      "scope": 15014,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 15000,
+                        "name": "ElementaryTypeName",
+                        "src": "2090:7:35"
+                      }
+                    ],
+                    "id": 15001,
+                    "name": "VariableDeclaration",
+                    "src": "2090:16:35"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_priceTicketInGuitar",
+                      "overrides": null,
+                      "scope": 15014,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 15002,
+                        "name": "ElementaryTypeName",
+                        "src": "2117:7:35"
+                      }
+                    ],
+                    "id": 15003,
+                    "name": "VariableDeclaration",
+                    "src": "2117:28:35"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_discountDivisor",
+                      "overrides": null,
+                      "scope": 15014,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 15004,
+                        "name": "ElementaryTypeName",
+                        "src": "2156:7:35"
+                      }
+                    ],
+                    "id": 15005,
+                    "name": "VariableDeclaration",
+                    "src": "2156:24:35"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_rewardsBreakdown",
+                      "overrides": null,
+                      "scope": 15014,
+                      "stateVariable": false,
+                      "storageLocation": "calldata",
+                      "type": "uint256[6]",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "type": "uint256[6]"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "name": "uint256",
+                              "type": "uint256"
+                            },
+                            "id": 15006,
+                            "name": "ElementaryTypeName",
+                            "src": "2191:7:35"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "36",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "number",
+                              "type": "int_const 6",
+                              "value": "6"
+                            },
+                            "id": 15007,
+                            "name": "Literal",
+                            "src": "2199:1:35"
+                          }
+                        ],
+                        "id": 15008,
+                        "name": "ArrayTypeName",
+                        "src": "2191:10:35"
+                      }
+                    ],
+                    "id": 15009,
+                    "name": "VariableDeclaration",
+                    "src": "2191:37:35"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "_treasuryFee",
+                      "overrides": null,
+                      "scope": 15014,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 15010,
+                        "name": "ElementaryTypeName",
+                        "src": "2239:7:35"
+                      }
+                    ],
+                    "id": 15011,
+                    "name": "VariableDeclaration",
+                    "src": "2239:20:35"
+                  }
+                ],
+                "id": 15012,
+                "name": "ParameterList",
+                "src": "2079:187:35"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 15013,
+                "name": "ParameterList",
+                "src": "2275:0:35"
+              }
+            ],
+            "id": 15014,
+            "name": "FunctionDefinition",
+            "src": "2058:218:35"
+          },
+          {
+            "attributes": {
+              "body": null,
+              "functionSelector": "80a06160",
+              "implemented": false,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "viewCurrentLotteryId",
+              "overrides": null,
+              "scope": 15021,
+              "stateMutability": "nonpayable",
+              "virtual": false,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "text": " @notice View current lottery id"
+                },
+                "id": 15015,
+                "name": "StructuredDocumentation",
+                "src": "2284:52:35"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 15016,
+                "name": "ParameterList",
+                "src": "2371:2:35"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "mutability": "mutable",
+                      "name": "",
+                      "overrides": null,
+                      "scope": 15020,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 15017,
+                        "name": "ElementaryTypeName",
+                        "src": "2392:7:35"
+                      }
+                    ],
+                    "id": 15018,
+                    "name": "VariableDeclaration",
+                    "src": "2392:7:35"
+                  }
+                ],
+                "id": 15019,
+                "name": "ParameterList",
+                "src": "2391:9:35"
+              }
+            ],
+            "id": 15020,
+            "name": "FunctionDefinition",
+            "src": "2342:59:35"
+          }
+        ],
+        "id": 15021,
+        "name": "ContractDefinition",
+        "src": "25:2379:35"
+      }
+    ],
+    "id": 15022,
+    "name": "SourceUnit",
+    "src": "0:2406:35"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.12+commit.27d51765.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.5",
+  "updatedAt": "2022-03-21T03:36:40.315Z",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {
+      "buyTickets(uint256,uint32[])": {
+        "details": "Callable by users",
+        "params": {
+          "_lotteryId": ": lotteryId",
+          "_ticketNumbers": ": array of ticket numbers between 1,000,000 and 1,999,999"
+        }
+      },
+      "claimTickets(uint256,uint256[],uint32[])": {
+        "details": "Callable by users only, not contract!",
+        "params": {
+          "_brackets": ": array of brackets for the ticket ids",
+          "_lotteryId": ": lottery id",
+          "_ticketIds": ": array of ticket ids"
+        }
+      },
+      "closeLottery(uint256)": {
+        "details": "Callable by operator",
+        "params": {
+          "_lotteryId": ": lottery id"
+        }
+      },
+      "drawFinalNumberAndMakeLotteryClaimable(uint256,bool)": {
+        "details": "Callable by operator",
+        "params": {
+          "_autoInjection": ": reinjects funds into next lottery (vs. withdrawing all)",
+          "_lotteryId": ": lottery id"
+        }
+      },
+      "injectFunds(uint256,uint256)": {
+        "details": "Callable by operator",
+        "params": {
+          "_amount": ": amount to inject in GUT token",
+          "_lotteryId": ": lottery id"
+        }
+      },
+      "startLottery(uint256,uint256,uint256,uint256[6],uint256)": {
+        "details": "Callable by operator",
+        "params": {
+          "_discountDivisor": ": the divisor to calculate the discount magnitude for bulks",
+          "_endTime": ": endTime of the lottery",
+          "_priceTicketInGuitar": ": price of a ticket in GUT",
+          "_rewardsBreakdown": ": breakdown of rewards per bracket (must sum to 10,000)",
+          "_treasuryFee": ": treasury fee (10,000 = 100%, 100 = 1%)"
+        }
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {
+      "buyTickets(uint256,uint32[])": {
+        "notice": "Buy tickets for the current lottery"
+      },
+      "claimTickets(uint256,uint256[],uint32[])": {
+        "notice": "Claim a set of winning tickets for a lottery"
+      },
+      "closeLottery(uint256)": {
+        "notice": "Close lottery"
+      },
+      "drawFinalNumberAndMakeLotteryClaimable(uint256,bool)": {
+        "notice": "Draw the final number, calculate reward in GUT per group, and make lottery claimable"
+      },
+      "injectFunds(uint256,uint256)": {
+        "notice": "Inject funds"
+      },
+      "startLottery(uint256,uint256,uint256,uint256[6],uint256)": {
+        "notice": "Start the lottery"
+      },
+      "viewCurrentLotteryId()": {
+        "notice": "View current lottery id"
+      }
+    },
+    "version": 1
+  }
+}
