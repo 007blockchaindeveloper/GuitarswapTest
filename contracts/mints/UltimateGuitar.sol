@@ -1,6 +1,7 @@
 
 
 pragma solidity 0.6.12;
+
 import "../nft-farm/ERC721.sol";
 
 contract UltimateGuitar is ERC721Enumerable, Ownable {
