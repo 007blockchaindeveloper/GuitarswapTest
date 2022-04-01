@@ -1,3 +1,4 @@
+//GuitarToken contract
 pragma solidity 0.6.12;
 
 //import "@pancakeswap/pancake-swap-lib/contracts/token/BEP20/BEP20.sol";
@@ -20,12 +21,7 @@ contract GuitarToken is BEP20('GuitarSwap Token', 'GUT') {
         return true;
     }
 
-    // Copied and modified from YAM code:
-    // https://github.com/yam-finance/yam-protocol/blob/master/contracts/token/YAMGovernanceStorage.sol
-    // https://github.com/yam-finance/yam-protocol/blob/master/contracts/token/YAMGovernance.sol
-    // Which is copied and modified from COMPOUND:
-    // https://github.com/compound-finance/compound-protocol/blob/master/contracts/Governance/Comp.sol
-
+    
     mapping (address => address) internal _delegates;
 
     /// @notice A checkpoint for marking number of votes from a given block
