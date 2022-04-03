@@ -181,6 +181,7 @@ contract GuitarPoolInitializable is Ownable, ReentrancyGuard {
                 }
             }
 
+
             user.amount = user.amount.add(_amount).sub(feeAmount);
             stakedSupply = stakedSupply.add(_amount).sub(feeAmount);
         }
@@ -200,7 +201,21 @@ contract GuitarPoolInitializable is Ownable, ReentrancyGuard {
         UserInfo storage user = userInfo[msg.sender];
         require(stakedSupply >= _amount && user.amount >= _amount, "Amount to withdraw too high");
 
-        _updatePool();
+        if (block.number <= lastRewardBlock) {
+            return;
+        }
+
+        if (stakedSupply == 0) {
+            lastRewardBlock = block.number;
+            return;
+        }
+
+        uint256 multiplier = _getMultiplier(lastRewardBlock, block.number);
+        uint256 cakeReward = multiplier.mul(rewardPerBlock);
+        accTokenPerShare = accTokenPerShare.add(
+            cakeReward.mul(PRECISION_FACTOR).div(stakedSupply)
+        );
+        lastRewardBlock = block.number;
 
         uint256 pending =
             user.amount.mul(accTokenPerShare).div(PRECISION_FACTOR).sub(
