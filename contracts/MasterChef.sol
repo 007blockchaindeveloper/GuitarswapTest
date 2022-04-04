@@ -1,15 +1,9 @@
 pragma solidity 0.6.12;
 
-//import "@pancakeswap/pancake-swap-lib/contracts/math/SafeMath.sol";
-//import "@pancakeswap/pancake-swap-lib/contracts/access/Ownable.sol";
-//import '@pancakeswap/pancake-swap-lib/contracts/token/BEP20/SafeBEP20.sol';
-//import '@pancakeswap/pancake-swap-lib/contracts/access/Ownable.sol';
-
 import "./libs/SafeBEP20.sol";
 import "./CakeToken.sol";
 import "./SyrupBar.sol";
 
-// import "@nomiclabs/buidler/console.sol";
 
 interface IMigratorChef {
     // Perform LP token migration from legacy PancakeSwap to CakeSwap.
