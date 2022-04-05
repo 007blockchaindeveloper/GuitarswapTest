@@ -4,8 +4,6 @@ import '@pancakeswap/pancake-swap-lib/contracts/math/SafeMath.sol';
 import '@pancakeswap/pancake-swap-lib/contracts/token/BEP20/IBEP20.sol';
 import '@pancakeswap/pancake-swap-lib/contracts/token/BEP20/SafeBEP20.sol';
 
-// import "@nomiclabs/buidler/console.sol";
-
 // SousChef is the chef of new tokens. He can make yummy food and he is a fair guy as well as MasterChef.
 contract SousChef {
     using SafeMath for uint256;

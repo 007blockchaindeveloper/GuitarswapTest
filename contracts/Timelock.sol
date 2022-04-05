@@ -1,4 +1,3 @@
-// COPIED FROM https://github.com/compound-finance/compound-protocol/blob/master/contracts/Governance/GovernorAlpha.sol
 // Copyright 2020 Compound Labs, Inc.
 // Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
 // 1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
@@ -8,10 +7,9 @@
 //
 // Ctrl+f for XXX to see all the modifications.
 
-// XXX: pragma solidity ^0.5.16;
+
 pragma solidity 0.6.12;
 
-// XXX: import "./SafeMath.sol";
 import "@pancakeswap/pancake-swap-lib/contracts/math/SafeMath.sol";
 
 contract Timelock {

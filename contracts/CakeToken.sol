@@ -1,7 +1,5 @@
 //GuitarToken contract
 pragma solidity 0.6.12;
-
-//import "@pancakeswap/pancake-swap-lib/contracts/token/BEP20/BEP20.sol";
 import "./libs/BEP20.sol";
 // CakeToken with Governance.
 contract GuitarToken is BEP20('GuitarSwap Token', 'GUT') {
