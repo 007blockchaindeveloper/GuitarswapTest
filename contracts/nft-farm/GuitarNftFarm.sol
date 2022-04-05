@@ -103,7 +103,7 @@ contract GuitarNftFarm is Ownable, ReentrancyGuard, IERC721Receiver {
         external
         nonReentrant
     {
-        //require(block.timestamp >= startAt, "Farm not started yet");
+        require(block.timestamp >= startAt, "Farm not started yet");
         require(block.timestamp < endAt, "Farm ended already");
         require(nftAmountToBuy > 0, "Invalid nft amount to buy");
         require(

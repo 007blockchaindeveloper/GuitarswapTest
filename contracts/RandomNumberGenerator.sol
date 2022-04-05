@@ -33,7 +33,7 @@ contract RandomNumberGenerator is VRFConsumerBase, IRandomNumberGenerator, Ownab
      * @param _seed: seed provided by the GuitarSwap lottery
      */
     function getRandomNumber(uint256 _seed) external override {
-        //require(msg.sender == guitarLottery, "Only GuitarLottery");
+        require(msg.sender == guitarLottery, "Only GuitarLottery");
         require(keyHash != bytes32(0), "Must have valid key hash");
         require(LINK.balanceOf(address(this)) >= fee, "Not enough LINK tokens");
 

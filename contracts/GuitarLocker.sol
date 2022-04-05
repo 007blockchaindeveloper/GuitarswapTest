@@ -34,7 +34,7 @@ contract TokenLocker {
         require(_token != address(0), "illegal token");
         token = IBEP20(_token);
         receiver = _receiver; 
-        //lastReleaseAt = block.number;
+        lastReleaseAt = block.number;
         require(_intervalSeconds > SECONDS_PER_BLOCK, 'illegal interval');
         uint256 interval_ = _intervalSeconds.add(SECONDS_PER_BLOCK).sub(1).div(SECONDS_PER_BLOCK);
         interval = interval_;
