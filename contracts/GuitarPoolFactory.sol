@@ -111,7 +111,7 @@ contract GuitarPoolInitializable is Ownable, ReentrancyGuard {
 
         _stakedToken.balanceOf(address(this));
         _rewardToken.balanceOf(address(this));
-        // require(_stakedToken != _rewardToken, "stakedToken must be different from rewardToken");
+        require(_stakedToken != _rewardToken, "stakedToken must be different from rewardToken");
         require(_startBlock > block.number, "startBlock cannot be in the past");
         require(_startBlock < _bonusEndBlock, "startBlock must be lower than endBlock");
 
