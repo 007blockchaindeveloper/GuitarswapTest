@@ -81,10 +81,10 @@ contract('Timelock', ([alice, bob, carol, dev, minter]) => {
             this.chef.address, '0', 'transferOwnership(address)',
             encodeParameters(['address'], [minter]), eta, { from: bob },
         );
-        // await this.timelock.queueTransaction(
-        //     this.chef.address, '0', 'add(uint256,address,bool)',
-        //     encodeParameters(['uint256', 'address', 'bool'], ['100', this.lp2.address, false]), eta, { from: bob },
-        // );
+        await this.timelock.queueTransaction(
+            this.chef.address, '0', 'add(uint256,address,bool)',
+            encodeParameters(['uint256', 'address', 'bool'], ['100', this.lp2.address, false]), eta, { from: bob },
+        );
         await time.increase(time.duration.hours(9));
         await this.timelock.executeTransaction(
             this.chef.address, '0', 'transferOwnership(address)',
@@ -95,12 +95,12 @@ contract('Timelock', ([alice, bob, carol, dev, minter]) => {
             "revert Ownable: caller is not the owner",
         );
         await this.chef.add('1000', this.lp1.address,'100', true, { from: minter })
-        // await this.timelock.executeTransaction(
-        //     this.chef.address, '0', 'add(uint256,address,bool)',
-        //     encodeParameters(['uint256', 'address', 'bool'], ['100', this.lp2.address, false]), eta, { from: bob },
-        // );
-        // assert.equal((await this.chef.poolInfo('0')).valueOf().allocPoint, '200');
-        // assert.equal((await this.chef.totalAllocPoint()).valueOf(), '300');
-        // assert.equal((await this.chef.poolLength()).valueOf(), '2');
+        await this.timelock.executeTransaction(
+            this.chef.address, '0', 'add(uint256,address,bool)',
+            encodeParameters(['uint256', 'address', 'bool'], ['100', this.lp2.address, false]), eta, { from: bob },
+        );
+        assert.equal((await this.chef.poolInfo('0')).valueOf().allocPoint, '200');
+        assert.equal((await this.chef.totalAllocPoint()).valueOf(), '300');
+        assert.equal((await this.chef.poolLength()).valueOf(), '2');
     });
 });
