@@ -28,6 +28,13 @@ contract('GuitarNftStaking', ([alice, bob, carol, dev, minter]) => {
         await this.cake.approve(this.guitarNftStaking.address, tokenAmountToStake);
         await this.guitarNftStaking.updateMaxNftsPerUser(10);
         
+        this.guitarNftStaking1 = await GuitarNftStaking.new(  this.nftToken1.address,this.cake.address, tnow, tend,rewardPerBlock, { from: alice, gas: 20000000 });	
+		let nftAmount1 = 10;
+        await this.nftToken.airdrop([ alice,this.guitarNftStaking1.address], nftAmount1);
+        await this.cake.mint(tokenAmountToStake);
+        await this.cake.approve(this.guitarNftStaking1.address, tokenAmountToStake);
+        await this.guitarNftStaking1.updateMaxNftsPerUser(10);
+
 		console.log("GuitarNftStaking ", this.guitarNftStaking.address);
     });
     it("stake", async () => {   
