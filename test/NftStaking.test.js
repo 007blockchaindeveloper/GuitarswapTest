@@ -2,6 +2,8 @@ const { expectRevert, time } = require('@openzeppelin/test-helpers');
 const { assert } = require('chai');
 const CakeToken = artifacts.require('GuitarToken');
 const BetaGuitar = artifacts.require('BetaGuitar');
+const BikeGuitar = artifacts.require('BikeGuitar');
+const EkectroGuitar = artifacts.require('EkectroGuitar');
 const GuitarNftStaking = artifacts.require('GuitarNftStaking');
 const truffleAssert = require('truffle-assertions');
 const rewardPerBlock = web3.utils.toWei('0.0001', 'ether');
@@ -10,6 +12,8 @@ contract('GuitarNftStaking', ([alice, bob, carol, dev, minter]) => {
     beforeEach(async () => { 
         this.cake = await CakeToken.deployed();  
         this.nftToken = await BetaGuitar.deployed();  
+        this.nftToken1 = await BikeGuitar.deployed();  
+        this.nftToken2 = await EkectroGuitar.deployed();  
     });
   
     it("initialize", async () => {   
@@ -35,8 +39,8 @@ contract('GuitarNftStaking', ([alice, bob, carol, dev, minter]) => {
             console.log("Staked tokenId :", ev.tokenId);
             return true;
         });
-        // let treward = await time.latestBlock() + 10;
-        // await time.advanceBlockTo(treward);
+         let treward = await time.latestBlock() + 10;
+        await time.advanceBlockTo(treward);
     });
     it("pendingRewards", async () => {   
         let reward = await this.guitarNftStaking.pendingRewards(alice);
