@@ -246,6 +246,7 @@ pragma solidity 0.6.12;
  * @dev String operations.
  */
 library Strings {
+    
     bytes16 private constant alphabet = "0123456789abcdef";
 
     /**

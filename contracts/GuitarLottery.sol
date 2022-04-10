@@ -2,7 +2,9 @@
 // File: contracts/GuitarSwapLottery.sol
 
 pragma solidity 0.6.12;
+
 pragma experimental ABIEncoderV2;
+
 import "@openzeppelin/contracts/utils/ReentrancyGuard.sol";
 import '@pancakeswap/pancake-swap-lib/contracts/access/Ownable.sol';
 import "./libs/IGuitarSwapLottery.sol";
