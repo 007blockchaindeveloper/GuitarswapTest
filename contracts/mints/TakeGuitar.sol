@@ -1,7 +1,7 @@
 
 pragma solidity 0.6.12;
 import "../nft-farm/ERC721.sol";
-contract BikeGuitar is ERC721Enumerable, Ownable {
+contract TakeGuitar is ERC721Enumerable, Ownable {
     using Counters for Counters.Counter;
     using Strings for uint256;
 
@@ -20,7 +20,7 @@ contract BikeGuitar is ERC721Enumerable, Ownable {
     
     Counters.Counter private _publicGUITAR;
 
-    constructor() ERC721("Bike Guitar", "BIKEGUT") public {}
+    constructor() ERC721("Take Guitar", "TAKEGUT") public {}
 
     function setPaymentAddress(address paymentAddress) external onlyOwner {
         _PaymentAddress = payable(paymentAddress);
