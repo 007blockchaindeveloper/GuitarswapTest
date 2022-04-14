@@ -104,12 +104,6 @@ contract('GuitarSwapLottery', ([alice, bob, carol, dev, minter]) => {
     await this.lottery.drawFinalNumberAndMakeLotteryClaimable(this.lotteryId, true);
   });
 
-  // it('claimTickets', async () => {
-  
-  // });
 
-  // it('injectFunds', async () => {
-  
-  // });
 
 });
