@@ -15,7 +15,7 @@ contract NewGuitar is ERC721Enumerable, Ownable {
 
     mapping(address => uint256) private _mappingPublicMintCount;
 
-    uint256 public _activeDateTime = 1646990000; //(GMT): Friday, March 11, 2022 9:13:20 AM
+    uint256 public _activeDateTime = 1686990000; //(GMT):  May 30, 2022 9:13:20 AM
     
     string private _tokenBaseURI = "";
     
