@@ -239,7 +239,7 @@ contract GuitarNftStaking is Ownable,ReentrancyGuard, Pausable, IERC721Receiver 
         }
 
         for (uint256 i = 0; i < tokenIdList.length; i++) {
-            require(tokenIdList[i] > 0, "Invaild token id");
+           
 
             require(
                 isStaked(_msgSender(), tokenIdList[i]),
