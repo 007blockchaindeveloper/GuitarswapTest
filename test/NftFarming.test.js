@@ -29,7 +29,6 @@ contract('GuitarSwapLottery', ([alice, bob, carol, dev, minter]) => {
 		console.log("GuitarNftFarm ", this.guitarNftFarm.address);
     });
     it("stake", async () => {   
-        //let tokenAmountToStake = 10;
         let nftAmountToBuy = 2;
         let tokenAmountToStake = (nftAmountToBuy + 1 ) * nftTokenPrice;
         await this.nftToken.airdrop([this.guitarNftFarm.address], nftAmountToBuy + 5);

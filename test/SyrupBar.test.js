@@ -2,7 +2,7 @@ const { advanceBlockTo } = require('@openzeppelin/test-helpers/src/time');
 const { assert } = require('chai');
 const CakeToken = artifacts.require('GuitarToken');
 const SyrupBar = artifacts.require('GuitarSyrupBar');
-//const MasterChef = artifacts.require('GuitarMasterChef');
+
 
 contract('SyrupBar', ([alice, bob, carol, dev, minter]) => {
   beforeEach(async () => {
@@ -16,6 +16,7 @@ contract('SyrupBar', ([alice, bob, carol, dev, minter]) => {
   });
 
   it('burn', async () => {
+
     await advanceBlockTo('650');
     await this.syrup.mint(alice, 1000, { from: minter });
     await this.syrup.mint(bob, 1000, { from: minter });
