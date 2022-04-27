@@ -30,6 +30,13 @@ contract GuitarNftStaking is Ownable,ReentrancyGuard, Pausable, IERC721Receiver 
         uint256 lastRewardBlock;
     }
 
+    struct userAddressMap {
+        address[] keys;
+        mapping(address => bool) inserted;
+    }
+
+    userAddressMap[] private userAddressList;
+    
     // Info of each user that stakes LP tokens.
     mapping(address => UserInfo) private _userInfo;
 
